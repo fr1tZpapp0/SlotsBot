@@ -1,8 +1,11 @@
 import discord
 from discord.ext import commands
+import os
 import random
 
-TOKEN = 'OTU2MjE4NzgyMTAyMjEyNjY5.YjtCIw.PnadNvIYs22OxLF5Dw2UhkKWXJE'
+with open('TOKEN.txt', 'r') as f:
+    TOKEN = f.read()
+
 
 client = discord.Client()
 bot = commands.Bot(command_prefix='?')
@@ -34,6 +37,7 @@ async def blackjack(ctx):
     await ctx.send(embed=embedyourhand)
 
 async def hit(ctx):
-    embedhit = discord.Embed(title=)
+    #embedhit = discord.Embed(title=)
+    print("HELLO")
 
 bot.run(TOKEN)
